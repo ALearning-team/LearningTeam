@@ -1,9 +1,0 @@
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.csprojAssemblyReference.cache
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.csproj.CoreCompileInputs.cache
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\bin\Debug\DataService.dll.config
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\bin\Debug\DataService.dll
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\bin\Debug\DataService.pdb
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\bin\Debug\MySql.Data.dll
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.csproj.CopyComplete
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.dll
-D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.pdb
