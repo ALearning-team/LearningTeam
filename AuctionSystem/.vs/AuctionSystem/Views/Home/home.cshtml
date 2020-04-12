@@ -1,0 +1,424 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/CSS/Home/swiper-3.4.2.min.css" rel="stylesheet" />
+    <link href="~/CSS/Home/main.css" rel="stylesheet" />
+    <title>浙江拍卖网-浙江省拍卖行业协会</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="header-logo">
+            <div class="header-logo-img">
+                <img src="~/Image/Home/logo.png" alt="logo" />
+                <img src="~/Image/Home/flash.gif" alt="flash" class="flash" />
+            </div>
+        </div>
+        <div class="header-nav">
+            <ul>
+                <li v-for="(item,index) in navList"
+                    :key="index"
+                    :class="{'cut':item.isCut}"
+                    v-on:click="navCut(index)">
+                    <a :href="item.url">{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main pb-10">
+            <div class="section clearfix">
+                <div class="bulletin fl">
+                    <div class="title clearfix border-bottom">
+                        <p class="fl">通知公告</p>
+                        <a href="javascrpt:;" class="fr">查看更多</a>
+                    </div>
+                    <div class="bulletin-list">
+                        <ul>
+                            <li v-for="(item,index) in bulletinList"
+                                :key="index">
+                                <a :href="item.url" class="onetxt">{{item.title}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="news fl">
+                    <div class="title clearfix">
+                        <p class="fl">综合新闻</p>
+                        <!-- <a href="javascrpt:;" class="fr">查看更多</a> -->
+                    </div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"
+                                 v-for="(item,index) in swiperDataList"
+                                 :key="index">
+                                <a :href="item.url">
+                                    <img :src="item.imgUrl" alt="" />
+                                    <p>
+                                        {{item.title}}
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="thing fl">
+                    <div class="title clearfix border-right border-bottom">
+                        <p class="fl">行业动态</p>
+                        <a href="javascrpt:;" class="fr">查看更多</a>
+                    </div>
+                    <div class="thing-list">
+                        <div class="thing-other">
+                            <div class="thing-other-title">
+                                <h1>
+                                    中国拍卖行业协会黄小坚会长致湖北省拍卖业同仁慰问电
+                                </h1>
+                            </div>
+                            <div class="thing-other-content">
+                                编者按：
+                                自武汉封城以来，中国拍卖行业协会以及全国各地拍卖协会都一直密切关注着湖北的疫情，纷
+                            </div>
+                        </div>
+                        <ul>
+                            <li v-for="(item,index) in bulletinList"
+                                :key="index">
+                                <a :href="item.url" class="onetxt">{{item.title}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="work">
+                    <div class="title clearfix border-right border-bottom">
+                        <p class="fl">协会工作</p>
+                        <!-- <a href="javascrpt:;" class="fr">查看更多</a> -->
+                    </div>
+                    <div class="work-list">
+                        <ul>
+                            <li v-for="(item,index) in workList"
+                                :key="index">
+                                {{item.name}}
+                                <ul class="children-item"
+                                    :class="{'show':item.isShow}">
+                                    <li v-for="(v,i) in item.children"
+                                        :key="i">
+                                        {{v.name}}
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="plug">
+                    <a href="javascript:;">
+                        <img src="~/Image/Home/banner1.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="auction-post fl">
+                    <div class="title clearfix border-right border-bottom">
+                        <p class="fl">拍卖公告</p>
+                        <a href="javascrpt:;" class="fr">查看更多</a>
+                    </div>
+                    <div class="auction-post-list">
+                        <ul>
+                            <li v-for="(item,index) in auctionList"
+                                :key="index"
+                                class="clearfix">
+                                <div class="auction-post-list-type fl">
+                                    {{item.type}}
+                                </div>
+                                <a href="javascript:;" class="auction-post-list-title  fl"> {{item.title}}</a>
+                                <div class="auction-post-list-time fr">{{item.creatTime}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="auction-post fr">
+                    <div class="title clearfix border-right border-bottom">
+                        <p class="fl">招商信息</p>
+                        <a href="javascrpt:;" class="fr">查看更多</a>
+                    </div>
+                    <div class="auction-post-list">
+                        <ul>
+                            <li v-for="(item,index) in investList"
+                                :key="index"
+                                class="clearfix">
+                                <a href="javascript:;" class="auction-post-list-title  fl">
+                                    {{item.title}}
+                                    <div class="auction-post-list-title-icon" v-if='item.isNew'>
+                                        <img src="./images/hot-icon.gif" alt="">
+                                    </div>
+                                </a>
+                                <div class="auction-post-list-time fr">{{item.creatTime}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./js/vue.js"></script> -->
+    <script src="~/Scripts/Home/swiper-3.4.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+			let app = new Vue({
+				el: '#app',
+				data: {
+					//导航条
+					navList: [
+						{
+							name: '  首页',
+							url: 'index.html',
+							isCut: true,
+						},
+						{
+							name: '协会介绍',
+							url: 'javascript:;',
+							isCut: false,
+						},
+						{
+							name: '政策法规',
+							url: 'javascript:;',
+							isCut: false,
+						},
+						{
+							name: '行业动态',
+							url: 'javascript:;',
+							isCut: false,
+						},
+						{
+							name: '行业统计',
+							url: 'javascript:;',
+							isCut: false,
+						},
+						{
+							name: '交流园地',
+							url: 'javascript:;',
+							isCut: false,
+						},
+						{
+							name: '下载专区',
+							url: 'javascript:;',
+							isCut: false,
+						},
+						{
+							name: '联系我们',
+							url: 'javascript:;',
+							isCut: false,
+						},
+					],
+					//公告列表
+					bulletinList: [
+						{
+							id: 1,
+							url: 'javascript:;',
+							title: '关于开通2019年拍卖师网络继续教育课程的通知',
+						},
+						{
+							id: 1,
+							url: 'javascript:;',
+							title: '关于开通2019年拍卖师网络继续教育课程的通知',
+						},
+						{
+							id: 1,
+							url: 'javascript:;',
+							title: '关于开通2019年拍卖师网络继续教育课程的通知',
+						},
+					],
+					//轮播列表
+					swiperDataList: [
+						{
+							imgUrl: './images/testImge.jpg',
+							title: '指敬20年拍卖师',
+							id: 1,
+							Url: 'javascript:;',
+						},
+						{
+							imgUrl: './images/testImge.jpg',
+							title: '指敬20年拍卖师',
+							id: 1,
+							Url: 'javascript:;',
+						},
+						{
+							imgUrl: './images/testImge2.jpg',
+							title: '看这里',
+							id: 1,
+							Url: 'javascript:;',
+						},
+					],
+					//企业工作列表
+					workList: [
+						{
+							name: '会员管理',
+							isShow: false,
+							children: [
+								{
+									name: '会员单位',
+									url: 'javascript:;',
+								},
+								{
+									name: '管理规定',
+									url: 'javascript:;',
+								},
+								{
+									name: '加入会员',
+									url: 'javascript:;',
+								},
+							],
+						},
+						{
+							name: '拍卖师',
+							isShow: false,
+							children: [
+								{
+									name: '拍卖师评定',
+									url: 'javascript:;',
+								},
+								{
+									name: '拍卖师名录',
+									url: 'javascript:;',
+								},
+								{
+									name: '拍卖师分会会员',
+									url: 'javascript:;',
+								},
+								{
+									name: '拍卖师园地',
+									url: 'javascript:;',
+								},
+							],
+						},
+						{
+							name: '职业教育',
+							isShow: false,
+							children: [
+								{
+									name: '从业人员培训',
+									url: 'javascript:;',
+								},
+								{
+									name: '拍卖师继续教育',
+									url: 'javascript:;',
+								},
+								{
+									name: '其他培训活动',
+									url: 'javascript:;',
+								},
+							],
+						},
+						{
+							name: '企业资质',
+							isShow: false,
+							children: [
+								{
+									name: '司法拍卖企业',
+									url: 'javascript:;',
+								},
+								{
+									name: '文物拍卖企业',
+									url: 'javascript:;',
+								},
+								{
+									name: '拍卖企业等级',
+									url: 'javascript:;',
+								},
+								{
+									name: '全省拍企30强',
+									url: 'javascript:;',
+								},
+								{
+									name: '诚信示范企业',
+									url: 'javascript:;',
+								},
+							],
+						},
+					],
+					//拍卖公告
+					auctionList: [
+						{
+							title:
+								'上饶县七六路61号“阳光花园”房产及其附属建筑、附属物拍卖会',
+							id: 1,
+							type: '房地产',
+							creatTime: '2018-04-20',
+						},
+						{
+							title: '废剂（处置费用）、废剂拍卖公告会',
+							id: 2,
+							type: '药物',
+							creatTime: '2018-04-20',
+						},
+						{
+							title: '废剂（处置费用）、焦油拍卖公告',
+							id: 3,
+							type: '其他',
+							creatTime: '2018-04-20',
+						}
+                    ],
+                    //招商列表
+					investList: [
+						{
+							title:'254亩成熟核桃园拍卖招商公告',
+							id: 1,
+                            creatTime: '2018-04-20',
+                            isNew:true
+						},
+						{
+							title: '254亩成熟核桃园拍卖招商公告',
+							id: 2,
+							creatTime: '2018-04-20',
+                            isNew:false
+						},
+						{
+							title: '254亩成熟核桃园拍卖招商公告',
+							id: 3,
+							creatTime: '2018-04-20',
+                            isNew:true
+						}
+					]
+				},
+				created() {},
+				mounted() {
+					var swiper = new Swiper('.swiper-container', {
+						pagination: '.swiper-pagination',
+						nextButton: '.swiper-button-next',
+						prevButton: '.swiper-button-prev',
+						slidesPerView: 1,
+						paginationClickable: true,
+						spaceBetween: 30,
+						loop: true,
+					})
+				},
+				methods: {
+					navCut(index) {
+						this.navList.forEach((item, i) => {
+							item.isCut = false
+							if (index === i) {
+								item.isCut = true
+							}
+						})
+					},
+					workCut(index) {
+						this.workList.forEach((item, i) => {
+							if (index === i) {
+								item.isShow = !item.isShow
+							}
+						})
+					},
+				},
+			})
+    </script>
+</body>
+</html>
+
