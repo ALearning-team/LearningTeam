@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56717AC2-145E-4F62-8380-D292F5C79682}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataService</RootNamespace>
+    <AssemblyName>DataService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\applyjob.cs" />
+    <Compile Include="BLL\auction.cs" />
+    <Compile Include="BLL\business.cs" />
+    <Compile Include="BLL\enterprise.cs" />
+    <Compile Include="BLL\enterpriseauction.cs" />
+    <Compile Include="BLL\friendshiplink.cs" />
+    <Compile Include="BLL\homeposter.cs" />
+    <Compile Include="BLL\merchants.cs" />
+    <Compile Include="BLL\otherlink.cs" />
+    <Compile Include="BLL\role.cs" />
+    <Compile Include="BLL\user.cs" />
+    <Compile Include="DBUtility\DbHelperMySQL.cs" />
+    <Compile Include="DAL\applyjob.cs" />
+    <Compile Include="DAL\auction.cs" />
+    <Compile Include="DAL\business.cs" />
+    <Compile Include="DAL\enterprise.cs" />
+    <Compile Include="DAL\enterpriseauction.cs" />
+    <Compile Include="DAL\friendshiplink.cs" />
+    <Compile Include="DAL\homeposter.cs" />
+    <Compile Include="DAL\merchants.cs" />
+    <Compile Include="DAL\otherlink.cs" />
+    <Compile Include="DAL\role.cs" />
+    <Compile Include="DAL\user.cs" />
+    <Compile Include="Model\applyjob.cs" />
+    <Compile Include="Model\auction.cs" />
+    <Compile Include="Model\business.cs" />
+    <Compile Include="Model\enterprise.cs" />
+    <Compile Include="Model\enterpriseauction.cs" />
+    <Compile Include="Model\friendshiplink.cs" />
+    <Compile Include="Model\homeposter.cs" />
+    <Compile Include="Model\merchants.cs" />
+    <Compile Include="Model\otherlink.cs" />
+    <Compile Include="Model\role.cs" />
+    <Compile Include="Model\user.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
