@@ -7,3 +7,11 @@ D:\学习\拍卖系统\代码\AuctionSystem\DataService\bin\Debug\MySql.Data.dll
 D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.csproj.CopyComplete
 D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.dll
 D:\学习\拍卖系统\代码\AuctionSystem\DataService\obj\Debug\DataService.pdb
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\bin\Debug\DataService.dll.config
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\bin\Debug\DataService.dll
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\bin\Debug\DataService.pdb
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\bin\Debug\MySql.Data.dll
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\obj\Debug\DataService.csprojAssemblyReference.cache
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\obj\Debug\DataService.csproj.CopyComplete
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\obj\Debug\DataService.dll
+D:\xm\LearningTeam\AuctionSystem\.vs\DataService\obj\Debug\DataService.pdb

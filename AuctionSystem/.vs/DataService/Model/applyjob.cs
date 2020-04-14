@@ -18,7 +18,7 @@ using System;
 namespace DataService.Model
 {
 	/// <summary>
-	/// applyjob:实体类(属性说明自动提取数据库字段的描述信息)
+	/// applyjob:招商求职实体类(属性说明自动提取数据库字段的描述信息)
 	/// </summary>
 	[Serializable]
 	public partial class applyjob
@@ -31,7 +31,7 @@ namespace DataService.Model
 		private string _title;
 		private string _content;
 		/// <summary>
-		/// auto_increment
+		/// 表IDauto_increment
 		/// </summary>
 		public int ID
 		{
@@ -39,7 +39,7 @@ namespace DataService.Model
 			get{return _id;}
 		}
 		/// <summary>
-		/// 
+		/// 企业ID
 		/// </summary>
 		public string EID
 		{
@@ -47,7 +47,7 @@ namespace DataService.Model
 			get{return _eid;}
 		}
 		/// <summary>
-		/// 
+		/// 标题
 		/// </summary>
 		public string Title
 		{
@@ -55,7 +55,7 @@ namespace DataService.Model
 			get{return _title;}
 		}
 		/// <summary>
-		/// 
+		/// 正文
 		/// </summary>
 		public string Content
 		{

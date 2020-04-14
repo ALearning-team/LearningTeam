@@ -18,7 +18,7 @@ using System;
 namespace DataService.Model
 {
 	/// <summary>
-	/// user:实体类(属性说明自动提取数据库字段的描述信息)
+	/// user:用户实体类(属性说明自动提取数据库字段的描述信息)
 	/// </summary>
 	[Serializable]
 	public partial class user
@@ -41,7 +41,7 @@ namespace DataService.Model
 			get{return _id;}
 		}
 		/// <summary>
-		/// 
+		/// 用户名称
 		/// </summary>
 		public string UserName
 		{
@@ -49,7 +49,7 @@ namespace DataService.Model
 			get{return _username;}
 		}
 		/// <summary>
-		/// 
+		/// 密码
 		/// </summary>
 		public string PassWord
 		{
@@ -57,7 +57,7 @@ namespace DataService.Model
 			get{return _password;}
 		}
 		/// <summary>
-		/// 
+		/// 角色ID
 		/// </summary>
 		public int RoleID
 		{
@@ -65,7 +65,7 @@ namespace DataService.Model
 			get{return _roleid;}
 		}
 		/// <summary>
-		/// 
+		/// 创建用户
 		/// </summary>
 		public string CreateUser
 		{
@@ -73,7 +73,7 @@ namespace DataService.Model
 			get{return _createuser;}
 		}
 		/// <summary>
-		/// on update CURRENT_TIMESTAMP
+		/// 创建时间
 		/// </summary>
 		public DateTime? CreateTime
 		{
