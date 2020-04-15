@@ -49,6 +49,7 @@
     <Compile Include="BLL\applyjob.cs" />
     <Compile Include="BLL\auction.cs" />
     <Compile Include="BLL\business.cs" />
+    <Compile Include="BLL\consult.cs" />
     <Compile Include="BLL\enterprise.cs" />
     <Compile Include="BLL\enterpriseauction.cs" />
     <Compile Include="BLL\friendshiplink.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="BLL\otherlink.cs" />
     <Compile Include="BLL\role.cs" />
     <Compile Include="BLL\user.cs" />
+    <Compile Include="DAL\consult.cs" />
     <Compile Include="DBUtility\DbHelperMySQL.cs" />
     <Compile Include="DAL\applyjob.cs" />
     <Compile Include="DAL\auction.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Model\applyjob.cs" />
     <Compile Include="Model\auction.cs" />
     <Compile Include="Model\business.cs" />
+    <Compile Include="Model\consult.cs" />
     <Compile Include="Model\enterprise.cs" />
     <Compile Include="Model\enterpriseauction.cs" />
     <Compile Include="Model\friendshiplink.cs" />
